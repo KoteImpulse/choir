@@ -1,0 +1,16 @@
+@import '../../styles/mixins.scss';
+
+.sectionHeader {
+	display: flex;
+	font-size: 2vw;
+	padding-left: 12%;
+	font-family: var(--fontH);
+	font-style: italic;
+	font-weight: 600;
+	transform-origin: left;
+
+	@include mq(475) {
+		font-size: var(--fsMH);
+		padding: 0;
+	}
+}

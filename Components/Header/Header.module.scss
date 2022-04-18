@@ -1,0 +1,44 @@
+@import '../../styles/mixins.scss';
+
+.header {
+	display: grid;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: var(--gridRow);
+	backdrop-filter: saturate(180%) blur(1px);
+	background-color: rgba(0, 0, 0, 0.72);
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: var(--gridColGap);
+	grid-template-rows: 1fr;
+	row-gap: var(--gridRowGap);
+	padding: 0 var(--gridColMargin);
+	font-family: var(--fontM);
+	font-size: 1vw;
+	align-items: center;
+	z-index: 1000;
+
+	.logo {
+		display: flex;
+		justify-self: start;
+		flex-direction: column;
+		.logoText1 {
+			user-select: none;
+			flex: 0 1 50%;
+		}
+		.logoText2 {
+			user-select: none;
+			flex: 0 1 50%;
+		}
+	}
+	.linkContainer {
+		display: flex;
+		justify-self: end;
+		cursor: pointer;
+	}
+
+	@include mq(475) {
+		font-size: 2.5vw;
+	}
+}

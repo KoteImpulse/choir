@@ -1,0 +1,20 @@
+.styledLink {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	cursor: pointer;
+
+	.link {
+		display: flex;
+		position: relative;
+		text-decoration: none;
+		padding-bottom: 10px;
+		.underLine {
+			position: absolute;
+			background: var(--colorM);
+			transform-origin: top;
+			bottom: 0;
+			// opacity: 0.8;
+		}
+	}
+}

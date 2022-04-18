@@ -1,0 +1,52 @@
+@import '../../styles/mixins.scss';
+
+.audioPlayer {
+	display: grid;
+	position: relative;
+	grid-template-columns: repeat(1, 1fr);
+	grid-template-rows: repeat(3, 30%);
+	row-gap: 10%;
+	width: 100%;
+
+	.trackItem {
+		display: flex;
+		border-radius: 8px;
+		padding: 4%;
+		color: var(--colorBg);
+		align-items: center;
+
+		.trackIcon {
+			--size: 2vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: var(--size);
+			border: 1px solid var(--colorBg);
+			border-radius: 50%;
+			width: var(--size);
+			height: var(--size);
+			svg {
+				path {
+					color: var(--colorBg);
+					fill: var(--colorBg);
+				}
+			}
+
+			@include mq(475) {
+				--size: var(--fsMH);
+			}
+		}
+		.trackSelectButton {
+			font-size: inherit;
+			text-align: left;
+			background: transparent;
+			border: none;
+			margin-left: 5%;
+			color: var(--colorBg);
+
+			@include mq(475) {
+				font-size: var(--fsMB);
+			}
+		}
+	}
+}

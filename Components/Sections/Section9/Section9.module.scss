@@ -1,0 +1,162 @@
+@import '../../../styles/mixins.scss';
+
+@mixin text1 {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	font-weight: 600;
+	font-size: 8vw;
+	font-weight: 100;
+	line-height: 1;
+}
+
+@mixin items {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0 0 10% 0;
+
+	.subItem1 {
+		display: flex;
+		flex-direction: column;
+		margin: 0 0 10% 0;
+	}
+	.subItem2 {
+		display: flex;
+		margin: 0 0 10% 0;
+	}
+	.subItem2 {
+		display: flex;
+		margin: 0 0 10% 0;
+	}
+}
+
+.Section9 {
+	height: 100vh;
+	width: 100%;
+	.container {
+		display: grid;
+		position: relative;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: repeat(12, 1fr);
+		column-gap: var(--gridColGap);
+		row-gap: var(--gridRowGap);
+		height: 100%;
+		width: 100%;
+		font-size: 1vw;
+
+		.img9 {
+			display: flex;
+			position: absolute;
+			bottom: 0;
+			left: -5%;
+			width: 45vw;
+			height: 40vh;
+		}
+		.map {
+			display: flex;
+			grid-column: 7/12;
+			grid-row: 5/12;
+
+			.mapMap {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.titleContent {
+			display: flex;
+			grid-column: 1/13;
+			grid-row: 1/5;
+			justify-content: flex-start;
+			align-items: center;
+		}
+		.item1 {
+			@include items();
+			grid-column: 2/6;
+			grid-row: 5/9;
+			.subItem1 {
+				.text1 {
+					color: var(--colorM);
+				}
+				.text2 {
+				}
+			}
+			.subItem2 {
+				.text1 {
+					color: var(--colorMD);
+				}
+				.text2 {
+					color: var(--colorC);
+				}
+			}
+		}
+	}
+	@include mq(475) {
+		.container {
+			font-size: var(--fsMB);
+			margin: 10% 0 0 0;
+
+			.img9 {
+				display: flex;
+				position: absolute;
+				bottom: 0;
+				left: 0%;
+				width: 50vw;
+				height: 50vh;
+				visibility: hidden;
+			}
+			.map {
+				grid-column: 1/13;
+				grid-row: 8/12;
+				width: 100%;
+				height: 100%;				
+			}
+
+			.titleContent {
+				grid-column: 2/13;
+				grid-row: 1/3;
+			}
+			.item1 {
+				grid-column: 2/13;
+				grid-row: 3/7;
+				.subItem1 {
+					.text1 {
+						display: flex;
+						color: var(--colorM);
+						max-width: 60%;
+					}
+					.text2 {
+						display: flex;
+						color: var(--colorMD);
+					}
+				}
+				.subItem2 {
+					.text1 {
+						color: var(--colorMD);
+					}
+					.text2 {
+						color: var(--colorMD);
+					}
+				}
+				.subItem3 {
+					display: flex;
+					flex-direction: column;
+					.text1 {
+						color: var(--colorMD);
+					}
+					.text2 {
+						color: var(--colorMD);
+					}
+				}
+			}
+		}
+	}
+	@include mq (320) {
+		.container {
+			.map{
+				grid-column: 1/12;
+			}
+		}
+	}
+}
