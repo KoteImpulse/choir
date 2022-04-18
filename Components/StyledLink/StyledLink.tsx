@@ -29,7 +29,7 @@ const StyledLink: FC<StyledLinkProps> = ({ text, className, ...props }) => {
 			whileHover='hover'
 			initial='initial'
 		>
-			<Link href='tel:89108108884'>
+			<Link href='tel:810'>
 				<a className={styles.link}>
 					{text}
 					<motion.span

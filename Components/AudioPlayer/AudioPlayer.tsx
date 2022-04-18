@@ -2,7 +2,6 @@ import React, {
 	DetailedHTMLProps,
 	HTMLAttributes,
 	useEffect,
-	useState,
 } from 'react';
 import cn from 'classnames';
 import { IoPauseOutline, IoPlayOutline } from 'react-icons/io5';
@@ -17,24 +16,28 @@ interface AudioPlayerProps
 
 let audio: HTMLAudioElement;
 
-const music: ITrack[] = [{
-	id: 1,
-	title: 'Д. Яичков. Пасхальные стихиры знаменного распева',
-	author: 'DC',
-	audio: '/audioFiles/DC1.mp3',
-},
-{
-	id: 2,
-	title: 'Полихронион. Многая лета на греческом',
-	author: 'DC',
-	audio: '/audioFiles/DC2.mp3',
-},
-{
-	id: 3,
-	title: 'Д. Яичков. Взбранной воеводе',
-	author: 'DC',
-	audio: '/audioFiles/DC3.mp3',
-},	
+const music: ITrack[] = [
+	{
+		id: 1,
+		// title: 'Д. Яичков. Пасхальные стихиры знаменного распева',
+		title: 'DC1',
+		author: 'DC',
+		audio: '/audioFiles/test/DC1.m4a',
+	},
+	{
+		id: 2,
+		// title: 'Полихронион. Многая лета на греческом',
+		title: 'DC2',
+		author: 'DC',
+		audio: '/audioFiles/test/DC2.m4a',
+	},
+	{
+		id: 3,
+		// title: 'Д. Яичков. Взбранной воеводе',
+		title: 'DC3',
+		author: 'DC',
+		audio: '/audioFiles/test/DC3.m4a',
+	},
 ];
 
 const AudioPlayer = ({

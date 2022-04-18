@@ -11,8 +11,8 @@ const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 	return (
 		<header className={cn(styles.header, className)} {...props}>
 			<div className={styles.logo}>
-				<span className={styles.logoText1}>Православный</span>
-				<span className={styles.logoText2}>хор Пилецкого</span>
+				<span className={styles.logoText1}>Test</span>
+				<span className={styles.logoText2}>хор test</span>
 			</div>
 			<div className={styles.linkContainer}>
 				<StyledLink text={allText.buttonText[0].text} />
